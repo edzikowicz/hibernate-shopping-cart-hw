@@ -16,7 +16,7 @@ import java.util.List;
 public class ShoppingCart {
     @Id
     private Long id;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "shoppingCart", cascade = CascadeType.ALL)
     private List<Ticket> tickets = new ArrayList<Ticket>();
     @OneToOne
     @JoinColumn(name = "user_id")
